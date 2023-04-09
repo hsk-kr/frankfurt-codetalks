@@ -13,9 +13,9 @@ const TopSection = () => {
 
   return (
     <div className="h-screen relative">
-      <div className="absolute h-screen inset-0 z-back">
+      <div className="absolute h-screen inset-0 z-back fixed">
         <Image
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-60 top-0 fixed"
           src="/imgs/bg-ffa.jpg"
           alt="Frankfurt"
           width={2000}
