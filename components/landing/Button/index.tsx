@@ -2,15 +2,14 @@ import { HTMLProps } from "react";
 
 export type ButtonColor = "yellow";
 
-interface ButtonProps
-  extends Omit<HTMLProps<HTMLButtonElement>, "type" | "className"> {
+interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement>, "type"> {
   color: ButtonColor;
 }
 
 /**
  * Button
  */
-const Button = ({ color, ...rest }: ButtonProps) => {
+const Button = ({ color, className, ...rest }: ButtonProps) => {
   let buttonStyle = "";
 
   switch (color) {
@@ -19,13 +18,10 @@ const Button = ({ color, ...rest }: ButtonProps) => {
       break;
   }
 
-  return (
-    <button
-      type="button"
-      className={`w-fit p-2 rounded-lg font-medium ${buttonStyle}`}
-      {...rest}
-    />
-  );
+  const finalClassName =
+    className + `w-fit p-2 rounded-lg font-medium ${buttonStyle}`;
+
+  return <button type="button" className={finalClassName} {...rest} />;
 };
 
 export default Button;
