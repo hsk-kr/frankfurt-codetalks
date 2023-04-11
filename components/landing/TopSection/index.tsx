@@ -1,14 +1,67 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../Button";
+import CodeAnimationViewer, { Language } from "../CodeAnimationViewer";
+import { useState } from "react";
+
+const codeList: {
+  code: string;
+  language: Language;
+}[] = [
+  {
+    language: "python",
+    code: `def join_us():
+  print('Hello FCT!')
+
+join_us()`,
+  },
+  {
+    language: "javascript",
+    code: `function joinUs() {
+  console.log('Hello FCT!');
+}
+
+joinUs();
+`,
+  },
+  {
+    language: "c",
+    code: `#include <stdio.h>
+int main() {
+  printf("Hello FCT!");
+  return 0;
+}`,
+  },
+  {
+    language: "go",
+    code: `package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("Hello FCT!");
+}`,
+  },
+  {
+    language: "java",
+    code: `class JoinUs {
+  public static void main(String[] args) {
+    System.out.println("Hello FCT!");
+  }
+}`,
+  },
+];
 
 /**
  * Section that shows title and kakao group chatroom link
  */
 const TopSection = () => {
-  const openKakaoGroupChat = () => {
-    window.open("https://open.kakao.com/o/g5kt2Fbf", "_blank");
+  const [codeOrderNo, setCodeOrderNo] = useState(0);
+
+  const handleCodeFinish = () => {
+    setTimeout(() => {
+      setCodeOrderNo((prevOrderNo) => (prevOrderNo + 1) % codeList.length);
+    }, 1000);
   };
 
   return (
@@ -24,14 +77,16 @@ const TopSection = () => {
         />
       </div>
       <div className="w-full h-full flex items-center justify-center">
-        <div className="flex flex-col pb-16">
-          <h1 className="text-5xl font-bold text-center">
+        <div className="flex flex-col pb-16 items-center">
+          <h1 className="text-5xl font-bold text-center mb-12">
             Frankfurt CodeTalks
           </h1>
-          <div className="flex justify-center mt-8">
-            <Button color="yellow" onClick={openKakaoGroupChat}>
-              Open Kakao GroupChat
-            </Button>
+          <div className="mx-8 w-96 max-w-xs h-80">
+            <CodeAnimationViewer
+              code={codeList[codeOrderNo].code}
+              language={codeList[codeOrderNo].language}
+              onFinish={handleCodeFinish}
+            />
           </div>
         </div>
       </div>

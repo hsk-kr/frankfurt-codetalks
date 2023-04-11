@@ -1,7 +1,8 @@
 import TopSection from "@/components/landing/TopSection";
 import WelcomeSection from "@/components/landing/WelcomeSection";
 import ProjectSection from "@/components/landing/ProjectSection";
-import TempPaddingSection from "@/components/landing/TempPaddingSection"; // !temp
+import BackgroundImage from "@/components/landing/BackgroundImage";
+import JoinUsSection from "@/components/landing/JoinUsSection";
 
 const Landing = () => {
   return (
@@ -9,7 +10,8 @@ const Landing = () => {
       <TopSection />
       <WelcomeSection />
       <ProjectSection />
-      <TempPaddingSection />
+      <BackgroundImage height={240} imgSrc="/imgs/code.jpg" />
+      <JoinUsSection />
     </>
   );
 };
