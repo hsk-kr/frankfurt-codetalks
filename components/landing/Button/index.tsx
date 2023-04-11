@@ -21,9 +21,9 @@ const Button = ({ color, className, ...rest }: ButtonProps) => {
       break;
   }
 
-  const finalClassName = `w-fit p-2 rounded-lg font-medium ${buttonStyle} ${
-    className || ""
-  }`;
+  const finalClassName = `${
+    className?.includes("w-") ? "" : "w-fit"
+  } p-2 rounded-lg font-medium ${buttonStyle} ${className || ""}`;
 
   return <button type="button" className={finalClassName} {...rest} />;
 };

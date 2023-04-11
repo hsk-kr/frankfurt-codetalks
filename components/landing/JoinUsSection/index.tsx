@@ -1,6 +1,12 @@
 "use client";
 
+import { Secular_One } from "next/font/google";
 import Button from "../Button";
+
+const secularOne = Secular_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const JoinUsSection = () => {
   const openLink = (link: string) => () => {
@@ -9,7 +15,9 @@ const JoinUsSection = () => {
 
   return (
     <div className="bg-white h-96 flex items-center justify-center flex-col">
-      <h1 className="text-4xl font-medium mb-4">Join Us</h1>
+      <h1 className={`text-4xl font-medium mb-4 ${secularOne.className}`}>
+        Join Us
+      </h1>
       <p className="text-gray-500 text-center">
         Join our programming Meetup if you live near Frankfurt and are
         interested in coding.

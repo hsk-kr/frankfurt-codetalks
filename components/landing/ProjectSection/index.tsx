@@ -1,5 +1,11 @@
 import Image from "next/image";
+import { Secular_One } from "next/font/google";
 import LinkButton from "../LinkButton";
+
+const secularOne = Secular_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const projects = [
   {
@@ -55,7 +61,9 @@ const projects = [
 const ProjectSection = () => {
   return (
     <div className="min-h-screen bg-slate-100 flex items-center justify-center flex-col py-12">
-      <h1 className="text-center text-4xl mb-12 font-medium">
+      <h1
+        className={`text-center text-4xl mb-12 font-medium ${secularOne.className}`}
+      >
         Member Projects
       </h1>
       <div className="grid grid-cols-1 gap-6 mx-12 md:grid-cols-4">

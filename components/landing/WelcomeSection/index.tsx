@@ -5,12 +5,20 @@ import {
   faDumbbell,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import { Secular_One } from "next/font/google";
+
+const secularOne = Secular_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const WelcomeSection = () => {
   return (
     <div className="py-16 min-h-screen bg-white flex justify-center items-center">
       <div>
-        <h1 className="text-center text-4xl mb-16 font-medium mx-4">
+        <h1
+          className={`text-center text-4xl mb-16 font-medium mx-4 ${secularOne.className}`}
+        >
           Welcome to Frankfurt CodeTalks
         </h1>
         <div className="flex justify-between items-center md:items-normal flex-col md:flex-row mx-8 gap-y-5 gap-x-12">

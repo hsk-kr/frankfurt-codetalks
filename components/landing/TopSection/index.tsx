@@ -1,8 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import CodeAnimationViewer, { Language } from "../CodeAnimationViewer";
 import { useState } from "react";
+import Image from "next/image";
+import { Secular_One } from "next/font/google";
+import CodeAnimationViewer, { Language } from "../CodeAnimationViewer";
+
+const secularOne = Secular_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const codeList: {
   code: string;
@@ -78,10 +84,12 @@ const TopSection = () => {
       </div>
       <div className="w-full h-full flex items-center justify-center">
         <div className="flex flex-col pb-16 items-center">
-          <h1 className="text-5xl font-bold text-center mb-12">
+          <h1
+            className={`text-5xl font-bold text-center mb-12 ${secularOne.className}`}
+          >
             Frankfurt CodeTalks
           </h1>
-          <div className="mx-8 w-96 max-w-xs h-80">
+          <div className="mx-8 w-72 md:w-96 h-80">
             <CodeAnimationViewer
               code={codeList[codeOrderNo].code}
               language={codeList[codeOrderNo].language}
