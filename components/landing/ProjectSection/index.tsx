@@ -56,7 +56,7 @@ const ProjectSection = () => {
   return (
     <div className="min-h-screen bg-slate-100 flex items-center justify-center flex-col py-12">
       <h1 className="text-center text-4xl mb-12 font-medium">
-        Featured Projects
+        Member Projects
       </h1>
       <div className="grid grid-cols-1 gap-6 mx-12 md:grid-cols-4">
         {projects.map((project, projectIdx) => (

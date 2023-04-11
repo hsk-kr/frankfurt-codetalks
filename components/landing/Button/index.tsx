@@ -1,6 +1,6 @@
 import { HTMLProps } from "react";
 
-export type ButtonColor = "yellow";
+export type ButtonColor = "yellow" | "gray";
 
 interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement>, "type"> {
   color: ButtonColor;
@@ -14,12 +14,16 @@ const Button = ({ color, className, ...rest }: ButtonProps) => {
 
   switch (color) {
     case "yellow":
-      buttonStyle += "bg-yellow-300 border border-slate-300";
+      buttonStyle += "bg-yellow-300 text-gray-800";
+      break;
+    case "gray":
+      buttonStyle += "bg-gray-500 text-white";
       break;
   }
 
-  const finalClassName =
-    className + `w-fit p-2 rounded-lg font-medium ${buttonStyle}`;
+  const finalClassName = `w-fit p-2 rounded-lg font-medium ${buttonStyle} ${
+    className || ""
+  }`;
 
   return <button type="button" className={finalClassName} {...rest} />;
 };

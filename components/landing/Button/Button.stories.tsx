@@ -19,3 +19,9 @@ export const Yellow: Story = {
     color: "yellow",
   },
 };
+
+export const Gray: Story = {
+  args: {
+    color: "gray",
+  },
+};
