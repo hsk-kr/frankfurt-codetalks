@@ -32,30 +32,6 @@ const projects = [
     title: "Coming Soon",
     link: "#",
   },
-  {
-    imgSrc: "/imgs/comingsoon.jpg",
-    category: "Web",
-    title: "Coming Soon",
-    link: "#",
-  },
-  {
-    imgSrc: "/imgs/comingsoon.jpg",
-    category: "PC",
-    title: "Coming Soon",
-    link: "#",
-  },
-  {
-    imgSrc: "/imgs/comingsoon.jpg",
-    category: "Web",
-    title: "Coming Soon",
-    link: "#",
-  },
-  {
-    imgSrc: "/imgs/comingsoon.jpg",
-    category: "PC",
-    title: "Coming Soon",
-    link: "#",
-  },
 ];
 
 const ProjectSection = () => {
@@ -79,10 +55,10 @@ const ProjectSection = () => {
             <div className="absolute w-full h-full left-0 top-0 opacity-0 hover:opacity-100 transition duration-300">
               <div className="bg-black opacity-50 w-full h-full left-0 top-0 absolute"></div>
               <div className="absolute z-10 w-full h-full flex items-center justify-center flex-col flex flex-row gap-y-4">
-                <span className="text-green-400 font-medium text-lg">
+                <span className="text-green-400 font-medium text-lg text-center">
                   {project.category}
                 </span>
-                <h3 className="text-white font-bold text-2xl">
+                <h3 className="text-white font-bold text-2xl text-center">
                   {project.title}
                 </h3>
                 <LinkButton href={project.link} />
