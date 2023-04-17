@@ -15,7 +15,7 @@ export const metadata = {
   title,
   description,
   keywords:
-    'Frankfurt Programming, Frankfurt Developer, Frankfurt Korean, 프랑크푸르트 프로그래밍, 프랑크푸르트 개발, 프랑크푸르트 스터디, 프랑크푸르트 한국',
+    'Frankfurt Programming, Frankfurt Developer, Frankfurt Korean, 프랑크푸르트 프로그래밍, 프랑크푸르트 개발, 프랑크푸르트 스터디, 프랑크푸르트 한국, Frankfurt CodeTalks, 프랑크푸르트 코드톡스',
   openGraph: {
     title,
     type: 'website',
