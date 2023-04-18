@@ -7,9 +7,9 @@ const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
 });
 
-const title = 'Frankfurt CodeTalks';
+const title = '프랑크푸르트 코드톡스 | Frankfurt CodeTalks';
 const description =
-  'Join our programming Meetup if you live near Frankfurt and are interested in coding.';
+  '프랑크푸르트 코딩 스터디 모임 | Join our programming Meetup if you live near Frankfurt and are interested in coding.';
 
 export const metadata = {
   title,
