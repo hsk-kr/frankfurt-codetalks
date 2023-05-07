@@ -34,7 +34,7 @@ const JoinUsSection = () => {
           className="w-60"
           color="gray"
           onClick={openLink(
-            "https://join.slack.com/t/newworkspace-2jw9272/shared_invite/zt-1sfklla5w-AL5ImQp3Jbu~MwBKoog7~w"
+            "https://join.slack.com/t/frankfurtcodetalks/shared_invite/zt-1ukuo1dgm-BuVrNjAz7yX~qJyHegNSQw"
           )}
         >
           Slack
