@@ -1,8 +1,8 @@
-import TopSection from "@/components/landing/TopSection";
-import WelcomeSection from "@/components/landing/WelcomeSection";
-import ProjectSection from "@/components/landing/ProjectSection";
-import BackgroundImage from "@/components/landing/BackgroundImage";
-import JoinUsSection from "@/components/landing/JoinUsSection";
+import TopSection from '@/components/landing/TopSection';
+import WelcomeSection from '@/components/landing/WelcomeSection';
+import ProjectSection from '@/components/landing/ProjectSection';
+import BackgroundImage from '@/components/landing/BackgroundImage';
+import JoinUsSection from '@/components/landing/JoinUsSection';
 
 const Landing = () => {
   return (

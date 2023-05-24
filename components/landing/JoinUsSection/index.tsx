@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { Secular_One } from "next/font/google";
-import Button from "../Button";
+import { Secular_One } from 'next/font/google';
+import Button from '../Button';
 
 const secularOne = Secular_One({
-  subsets: ["latin"],
-  weight: ["400"],
+  subsets: ['latin'],
+  weight: ['400'],
 });
 
 const JoinUsSection = () => {
   const openLink = (link: string) => () => {
-    window.open(link, "_blank");
+    window.open(link, '_blank');
   };
 
   return (
@@ -26,7 +26,7 @@ const JoinUsSection = () => {
         <Button
           className="w-60"
           color="yellow"
-          onClick={openLink("https://open.kakao.com/o/g5kt2Fbf")}
+          onClick={openLink('https://open.kakao.com/o/g5kt2Fbf')}
         >
           Kakao Group Chat
         </Button>
@@ -34,7 +34,7 @@ const JoinUsSection = () => {
           className="w-60"
           color="gray"
           onClick={openLink(
-            "https://join.slack.com/t/frankfurtcodetalks/shared_invite/zt-1ukuo1dgm-BuVrNjAz7yX~qJyHegNSQw"
+            'https://join.slack.com/t/frankfurtcodetalks/shared_invite/zt-1ukuo1dgm-BuVrNjAz7yX~qJyHegNSQw'
           )}
         >
           Slack

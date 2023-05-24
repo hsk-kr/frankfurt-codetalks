@@ -1,23 +1,29 @@
 /**
  * TODO: Need to design for mobile device
  */
-"use client";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+'use client';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+// TODO: Add links after developing addtional pages.
 const navItems: {
   name: string;
   href: string;
   disabled: boolean;
-}[] = [
-  {
-    name: "Meetup",
-    href: "#",
-    disabled: true,
-  },
-];
+}[] = [];
+// const navItems: {
+//   name: string;
+//   href: string;
+//   disabled: boolean;
+// }[] = [
+//   {
+//     name: "Meetup",
+//     href: "#",
+//     disabled: true,
+//   },
+// ];
 
 /**
  * Header in the default template
@@ -29,20 +35,20 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => setDetached(window.scrollY > 10);
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleNavbar = () => setOpenNavbar((prevOpenNavbar) => !prevOpenNavbar);
 
-  const comingSoon = () => alert("Coming Soon!");
+  const comingSoon = () => alert('Coming Soon!');
 
   const headerStyle = detached
-    ? "bg-white h-12"
-    : "bg-transparent h-14 text-white";
+    ? 'bg-white h-12'
+    : 'bg-transparent h-14 text-white';
 
-  const mobileNavbarStyle = detached ? "text-black bg-white" : "text-white";
+  const mobileNavbarStyle = detached ? 'text-black bg-white' : 'text-white';
 
   return (
     <header
@@ -52,11 +58,13 @@ const Header = () => {
         <Link href="/" className="mr-10 font-bold text-lg">
           FCT
         </Link>
-        <FontAwesomeIcon
-          icon={faBars}
-          className="w-4 h-4 md:hidden"
-          onClick={toggleNavbar}
-        />
+        {navItems.length > 0 && (
+          <FontAwesomeIcon
+            icon={faBars}
+            className="w-4 h-4 md:hidden"
+            onClick={toggleNavbar}
+          />
+        )}
         {openNavbar && (
           <div
             className={`flex md:hidden fixed top-12 w-full left-0 p-2 ${mobileNavbarStyle}`}
