@@ -1,6 +1,6 @@
 # Frankfurt CodeTalks
 
-Website: https://fct.h-code.dev
+Website: [https://frankfurt-codetalks-hsk-kr.vercel.app/](https://frankfurt-codetalks-hsk-kr.vercel.app/)
 
 A Programming study group for Koreans who living in Frankfurt.
 
